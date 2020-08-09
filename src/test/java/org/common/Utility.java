@@ -35,7 +35,7 @@ public class Utility {
 	public static String generate16DigitNumber() {
 		Random random = new Random();
 		String value = String.format((Locale) null, // don't want any thousand separators
-				"53%02d-%04d-%04d-%04d", random.nextInt(100), random.nextInt(10000), random.nextInt(10000),
+				"%04d-%04d-%04d-%04d", random.nextInt(10000), random.nextInt(10000), random.nextInt(10000),
 				random.nextInt(10000));
 		return value;
 	}
