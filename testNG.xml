@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose="1">
+	<test name="Add Bank Account in Organisation">
+		<classes>
+			<class name="org.tests.AddBankAccount">		
+			   <methods>
+                   <include name="addAccount"></include>
+               </methods>			
+			</class>			
+		</classes>
+	</test>
+</suite><!-- Suite -->
