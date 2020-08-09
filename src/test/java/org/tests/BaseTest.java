@@ -49,8 +49,10 @@ public class BaseTest {
 	@BeforeSuite
 	public void setUp() throws Exception {
 		try {
+			
 			// Setup Logging
 			PropertyConfigurator.configure(System.getProperty("user.dir") + "/config/log4j.properties");
+			System.setProperty("my.log", System.getProperty("user.dir"));
 			log = Logger.getLogger(this.getClass().getSimpleName());
 			log.info("SetUp Begins @BeforeSuite");
 			// Setup Reporting
@@ -59,6 +61,7 @@ public class BaseTest {
 			extent = new ExtentReports();
 			extent.attachReporter(reporter);
 
+			
 			// Read data from properties file
 			Properties properties = new Properties();
 			properties.load(new FileInputStream(System.getProperty("user.dir") + "/config/config.properties"));
