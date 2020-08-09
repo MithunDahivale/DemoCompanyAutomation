@@ -58,7 +58,7 @@ public class AddBankAccount extends BaseTest {
 			logger.log(Status.PASS, bankName + " Bank  has been selected");
 
 			// check the page title
-			Utility.waitUntilTitleContains(webDriver, "Enter your ANZ (NZ) account details");
+			Utility.waitUntilTitleContains(webDriver, "account details");
 			title = Utility.replaceAll(webDriver.getTitle());
 			log.info("Navigated successfully to " + title);
 			Assert.assertEquals(title, Messages.ENTERYOURANZACCOUNTDETAILS_WINDOW_TITLE);
@@ -72,7 +72,6 @@ public class AddBankAccount extends BaseTest {
 			addBankAccountsPage.enterAccountType(accountType);
 
 			String accountNumber = Utility.generate16DigitNumber();
-			log.info("Account Number " + accountNumber);
 			addBankAccountsPage.enterAccountNumber(accountNumber);
 
 			// Click on Continue and verify the confirmation message
